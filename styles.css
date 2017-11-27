@@ -61,6 +61,7 @@ body {
 
 .mainnav a:hover:not(:last-child) {
     color: black;
+    font-style: oblique;
 }
 
 
@@ -86,12 +87,13 @@ body {
 @media screen and (max-width: 600px) {
     .mainnav a {
         display: none;
+    
     }
 
     .mainnav a.navicon {
         float: left;
         display: block;
-        height: 20px;
+        height: 40px;
 
     }
     .currentpage {
@@ -104,6 +106,7 @@ body {
         color: black;
     }
 
+    
 
 
 
@@ -123,6 +126,7 @@ body {
     .mainnav.responsivenav a {
         display: block;
         text-align: right;
+        height: 40px;
 
 
     }
@@ -130,6 +134,8 @@ body {
     #logo {
         display: none;
     }
+    
+    
 
 
 }

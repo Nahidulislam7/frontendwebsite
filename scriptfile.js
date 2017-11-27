@@ -16,6 +16,7 @@ function collapsenav() {
 
 function stickyscroll() {
     let navbar = document.getElementById("mainnav");
+    let currentpage = document.getElementById("navicon");
     var sticky = navbar.offsetTop;
 
     if (window.pageYOffset >= sticky) {
