@@ -16,7 +16,8 @@ function collapsenav() {
 function stickyscroll() {
     let navbar = document.getElementById("mainnav");
     let currentpage = document.getElementById("navicon");
-    var sticky = navbar.offsetTop;
+    const sticky = navbar.offsetTop;
+    const slides = document.getElementsByClassName("banner");
 
     if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky");
@@ -27,19 +28,65 @@ function stickyscroll() {
 
 
 }
-    var current = 0;
-    bannerslide();
 
+window.onload = function () {
+    document.addEventListener("scroll", stickyscroll);
+    document.getElementById("navicon").addEventListener("click", collapsenav);
+    responsiveSlider()
+}
 
-    function bannerslide(){
-        slides = document.getElementsByClassName("banner");
+function responsiveSlider() {
 
-    setInterval(function () {
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].style.opacity = 0;
-        }
-        current = current != slides.length - 1 ? current + 1 : 0;
-        slides[current].style.opacity = 1;
-    }, 3000);
+  var slider = document.getElementById("homeimageslider");
+  var sliderWidth = slider.offsetWidth;
+  var slideList = document.getElementById("slidecontent");
+  var count = 1;
+  var items = slideList.querySelectorAll("li").length;
+  var prev = document.getElementById("prev");
+  var next = document.getElementById("next");
+
+  window.addEventListener('resize', function() {
+    sliderWidth = slider.offsetWidth;
+  });
+
+  var prevSlide = function() {
+    if(count > 1) {
+      count = count - 2;
+      slideList.style.left = "-" + count * sliderWidth + "px";
+      count++;
     }
+    else if(count = 1) {
+      count = items - 1;
+      slideList.style.left = "-" + count * sliderWidth + "px";
+      count++;
+    }
+  };
+
+  var nextSlide = function() {
+    if(count < items) {
+      slideList.style.left = "-" + count * sliderWidth + "px";
+      count++;
+    }
+    else if(count = items) {
+      slideList.style.left = "0px";
+      count = 1;
+    }
+  };
+  
+  next.addEventListener("click", function() {
+    nextSlide();
+  });
+
+  prev.addEventListener("click", function() {
+    prevSlide();
+  });
+  
+  setInterval(function() {
+    nextSlide()
+  }, 8000);
+
+};
+
+
+
 
