@@ -57,14 +57,14 @@ function responsiveSlider() {
     }
     else if(count = 1) {
       count = items - 1;
-      slideList.style.left = "-" + count * sliderWidth + "px";
+      slideList.style.left = "-" + count * sliderWidth  + "px";
       count++;
     }
   };
 
   var nextSlide = function() {
     if(count < items) {
-      slideList.style.left = "-" + count * sliderWidth + "px";
+      slideList.style.left = "-" + count * sliderWidth  + "px";
       count++;
     }
     else if(count = items) {
