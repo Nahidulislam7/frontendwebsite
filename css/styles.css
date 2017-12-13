@@ -1,11 +1,6 @@
 body {
     margin: 0;
-    font-family: Trebuchet MS;
 
-}
-
-.content {
-    padding: 29px;
 }
 
 
@@ -18,7 +13,7 @@ body {
     }
 
     .sticky + header {
-            padding-top: 70px;
+        padding-top: 70px;
 
     }
 
@@ -32,7 +27,7 @@ body {
         padding: 20px;
         position: relative
     }
-    
+
     h1 {
         font-size: 60px;
         font-family: impact;
@@ -54,7 +49,7 @@ body {
 
 
 .mainnav a {
-    font-family: Trebuchet MS;
+    font-family: 'Jura', sans-serif;
     color: white;
     padding: 14px 16px;
     text-decoration: none;
@@ -134,13 +129,13 @@ body {
     #logo {
         display: none;
     }
-    
+
     h1 {
         font-size: 40px;
-            
+
     }
 
-   
+
 
 
 }
@@ -178,8 +173,8 @@ footer p {
     position: relative;
     overflow: hidden;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-    
-    
+
+
 
 
 }
@@ -193,7 +188,7 @@ footer p {
     margin: 0;
     transition: all 750ms ease;
 
-    
+
 
 
 
@@ -204,7 +199,7 @@ footer p {
     height: 100%;
     width: calc(100vw);
     float: left;
-    
+
 
 }
 
@@ -252,12 +247,13 @@ footer p {
 }
 
 h1 {
-    font-family: impact;
+    font-family: 'Syncopate', sans-serif;
     text-align: center;
     color: #1a405e;
-    text-shadow: 1px -1px 2px rgba(0,0,0,1);
+    text-shadow: 1px -1px 2px rgba(0, 0, 0, 1);
     font-weight: bold;
     font-style: oblique;
     line-height: 1;
-    text-decoration: underline;
 }
+
+
