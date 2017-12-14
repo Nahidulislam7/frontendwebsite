@@ -12,6 +12,8 @@ function collapsenav() {
 
 }
 
+
+
 /*when the navigation bar reaches the top of the browser it sticks*/
 function stickyscroll() {
     let navbar = document.getElementById("mainnav");
