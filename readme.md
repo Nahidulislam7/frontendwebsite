@@ -1,7 +1,2 @@
-#New Website
-
-#Created a dummy navigation bar
-
-#made the navbar responsive
-
-#created a js function to make the navbar sticky and added some dummy content in the html
+#Navigation plan 
+![navigation plan](https://user-images.githubusercontent.com/25248857/34075010-588c09a2-e2b2-11e7-9048-2f746a645575.png)
