@@ -1,5 +1,7 @@
-function collapsenav() {
-    let changenav = document.getElementById("mainnav");
+
+function collapsenav() {                                    /*this function allows for the icon to collapse the nav for smaller devices*/
+    
+    var changenav = document.getElementById("mainnav");
     if (changenav.className === "mainnav") {
         changenav.className += " responsivenav";
 
@@ -14,15 +16,15 @@ function collapsenav() {
 
 
 
-/*when the navigation bar reaches the top of the browser it sticks*/
+
 function stickyscroll() {
-    let navbar = document.getElementById("mainnav");
-    let currentpage = document.getElementById("navicon");
-    const sticky = navbar.offsetTop;
+    var navbar = document.getElementById("mainnav");                        /*this function allows for the navigation bar to stick to the top of the window*/
+    var currentpage = document.getElementById("navicon");
+    var sticky = navbar.offsetTop;                              
     const slides = document.getElementsByClassName("banner");
 
     if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
+        navbar.classList.add("sticky");                                     /*if statment with a condition that checks if the user has scrolled*/
 
     } else {
         navbar.classList.remove("sticky");
@@ -33,7 +35,7 @@ function stickyscroll() {
 
 window.onload = function () {
     document.addEventListener("scroll", stickyscroll);
-    document.getElementById("navicon").addEventListener("click", collapsenav);
+    document.getElementById("navicon").addEventListener("click", collapsenav); /*when the icon is clicked the navigation collapses*/
     responsiveSlider()
 }
 

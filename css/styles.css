@@ -5,18 +5,18 @@ body {
     margin: 0;
 
 }
- 
+
 p {
-        font-family: 'Jura', sans-serif;
+    font-family: 'Jura', sans-serif;
 
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 651px) {          /*breakpoint for larger screen size devices*/
     .sticky {
         position: fixed;
         top: 0;
         width: 100%;
-        
+
 
     }
 
@@ -25,7 +25,7 @@ p {
 
     }
 
-   
+
 
     .mainnav a {
         top: -20px;
@@ -37,32 +37,40 @@ p {
         font-size: 80px;
     }
 
-    
+
     h2 {
-            font-size: 40px;
+        font-size: 40px;
 
     }
-    
+
     .homearticle header {
         margin-bottom: -30px;
-       
+
     }
-    
-    
-   
-    
+
+
+
+
     .homebanner h1 {
         margin-bottom: 20px;
-        
-    }
-    
-    .homearticle .left-col , .right-col , .cent-col  {
-        width: 32.5%;
 
-        
+    }
+
+    .homearticle .left-col,
+    .right-col,
+    .cent-col {
+        width: 32.5%;
+        margin-left: 5px;
+
+
     }
     
+    .homearticle{
+        margin-bottom: 400px;
+    }
     
+
+
 
 }
 
@@ -114,18 +122,25 @@ p {
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {          /*breakpoint for smaller screen sizes*/
     .mainnav a {
         display: none;
 
     }
     
     .homearticle {
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
         margin-top: -20px;
     }
 
+
+    .homearticle {
+        margin:20px;
+        margin-top: -10px;
+
+
+    }
 
     .mainnav a.navicon {
         float: left;
@@ -169,11 +184,13 @@ p {
         font-size: 40px;
 
     }
-    
-    .homearticle .left-col, .right-col, .cent-col {
+
+    .homearticle .left-col,
+    .right-col,
+    .cent-col {
         width: 100%;
     }
-    
+
 
 
 
@@ -299,13 +316,13 @@ h1 {
 }
 
 h2 {
-     font-family: 'Squada One', cursive;
+    font-family: 'Squada One', cursive;
     text-align: center;
     color: #1a405e;
     text-shadow: 1px rgba(0, 0, 0, 1);
     font-style: oblique;
     line-height: 1;
-    
+
 }
 
 h3 {
@@ -314,27 +331,30 @@ h3 {
     color: #1a405e;
     text-shadow: 1px rgba(0, 0, 0, 1);
     line-height: 1;
-    
+
 }
 
 
-.homearticle .left-col, .right-col, .cent-col {
-    display: inline-block;
+.homearticle .left-col,
+.right-col,
+.cent-col {
+    float: left;
 
-    margin:3px;
 }
 
 
 
 
-.homearticle .left-col p, .right-col p, .cent-col p {
+.homearticle .left-col p,
+.right-col p,
+.cent-col p {
     border-style: solid;
     border-color: #1a405e;
     padding: 20px;
-        border-radius: 5px;
+    border-radius: 5px;
 
-    
-    
+
+
 }
 
 
