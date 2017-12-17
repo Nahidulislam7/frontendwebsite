@@ -3,6 +3,9 @@
 
 body {
     margin: 0;
+     &.in-transition {
+    transition: transform 900ms ease;
+    }
 
 }
 
@@ -11,7 +14,65 @@ p {
 
 }
 
-@media screen and (min-width: 651px) {          /*breakpoint for larger screen size devices*/
+#scrollButton {
+  text-align: center;
+}
+
+.mainnav {
+    background-color: #1a405e;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+
+}
+
+.mainnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+
+
+}
+
+
+.mainnav ul li a {
+    font-family: 'Jura', sans-serif;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+
+
+
+}
+
+
+
+.mainnav ul .navicon {
+    display: none;
+    top: 0;
+}
+
+.mainnav .navicon:hover {
+    display: block;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+
+
+
+
+/*--------------------------------------------------------------------------*/
+
+@media screen and (min-width: 651px) {
+    /*breakpoint for larger screen size devices*/
     .sticky {
         position: fixed;
         top: 0;
@@ -25,13 +86,32 @@ p {
 
     }
 
-
-
-    .mainnav a {
-        top: -20px;
-        padding: 20px;
-        position: relative
+    .mainnav {
+        height: 80px;
     }
+
+    .mainnav ul li {
+        display: inline-block;
+
+    }
+
+
+    .mainnav ul li a:hover {
+        color: black;
+        background-color: #d1e8ff;
+
+
+    }
+
+
+    .mainnav ul li a {
+        position: relative;
+        top: -20px;
+        padding-top: 100%;
+        padding-bottom: 100%;
+
+    }
+
 
     h1 {
         font-size: 80px;
@@ -62,72 +142,50 @@ p {
         width: 32.5%;
         margin-left: 5px;
 
+        float: left;
+
 
     }
-    
-    .homearticle{
+
+
+    .homearticle .left-col p,
+    .right-col p,
+    .cent-col p {
+        height: 200px;
+
+
+
+
+    }
+
+    .homearticle {
         margin-bottom: 400px;
+        box-sizing: border-box;
+        width: 100%;
+
     }
-    
 
 
 
 }
 
+/*--------------------------------------------------------------------------*/
 
-.mainnav {
-    background-color: #1a405e;
-    overflow: hidden;
-    text-align: center;
-    z-index: 1;
+/*--------------------------------------------------------------------------*/
 
-}
-
-
-.mainnav a {
-    font-family: 'Jura', sans-serif;
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 15px;
-    display: inline-block;
-
-
-
-}
-
-
-.mainnav a:hover:not(:last-child) {
-    color: black;
-    background-color: #d1e8ff;
-}
-
-
-.mainnav .navicon {
-    display: none;
-}
-
-.mainnav .navicon:hover {
-    display: block;
-}
-
-.logo {
-    height: 50px;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
-
-}
-
-
-
-
-@media screen and (max-width: 650px) {          /*breakpoint for smaller screen sizes*/
-    .mainnav a {
+@media screen and (max-width: 650px) {
+    /*breakpoint for smaller screen sizes*/
+    .mainnav ul li a {
         display: none;
 
+
     }
-    
+
+    .navicon {
+        color: white;
+        
+    }
+
     .homearticle {
         display: flex;
         flex-direction: column;
@@ -136,7 +194,7 @@ p {
 
 
     .homearticle {
-        margin:20px;
+        margin: 20px;
         margin-top: -10px;
 
 
@@ -147,30 +205,56 @@ p {
         display: block;
         height: 40px;
 
+
+
+
+
     }
+
     .currentpage {
         background-color: black;
         color: white;
 
     }
-    .mainnav a:hover:not(:last-child) {
-        background-color: #ddd;
+    .mainnav ul li:hover:not(:last-child) {
+        background-color: grey;
         color: black;
     }
 
+
     .mainnav.responsivenav {
         position: relative;
+
+
+
+
+
     }
-    .mainnav.responsivenav a.navicon {
+
+    .mainnav.responsivenav ul {
+        top: 0;
+        margin-top: 0;
+
+    }
+    .mainnav.responsivenav ul li a.navicon {
         position: absolute;
         top: 0;
 
+
+
+
     }
 
-    .mainnav.responsivenav a {
+    .mainnav.responsivenav ul li a {
+        position: relative;
         display: block;
         text-align: right;
         height: 40px;
+
+
+
+
+
 
 
 
@@ -195,6 +279,8 @@ p {
 
 
 }
+
+/*--------------------------------------------------------------------------*/
 
 .imagesliderhome {
     margin-bottom: 200px;
@@ -339,6 +425,8 @@ h3 {
 .right-col,
 .cent-col {
     float: left;
+    box-sizing: border-box;
+
 
 }
 
@@ -350,11 +438,18 @@ h3 {
 .cent-col p {
     border-style: solid;
     border-color: #1a405e;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
-
-
+    overflow: auto;
 
 }
 
-
+cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
