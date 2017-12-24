@@ -34,6 +34,7 @@ window.onload = function () {
     document.addEventListener("scroll", stickyscroll);
     document.getElementById("navicon").addEventListener("click", collapsenav); /*when the icon is clicked the navigation collapses*/
     responsiveSlider();
+    pad();
 }
 
 function responsiveSlider() {
@@ -86,43 +87,40 @@ function responsiveSlider() {
 
 };
 
-var targetOffset, currentPosition,
-    body = document.body,
-    button = document.getElementById('scrollButton'),
-    animateTime = 900;
+window.onscroll = function() {scrollFunction()};
 
-function getPageScroll() {
-  var yScroll;
-
-  if (window.pageYOffset) {
-    yScroll = window.pageYOffset;
-  } else if (document.documentElement && document.documentElement.scrollTop) {
-    yScroll = document.documentElement.scrollTop;
-  } else if (document.body) {
-    yScroll = document.body.scrollTop;
-  }
-  return yScroll;
+function scrollFunction() {
+    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+        document.getElementById("myBtn").style.display = "block";
+    
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
 }
 
-button.addEventListener('click', function (event) {
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
-  targetOffset = document.getElementById(event.target.hash.substr(1)).offsetTop;
-  currentPosition = getPageScroll();
+function pad(){
+    var btn = document.getElementById("myBtn");
+    var foot = document.getElementById("footer");
+    var footbottom =foot.Top;
+    
+        if (foot.Top > btn.bottom){
+        document.getElementById("myBtn").style.display = "none";
 
-  body.classList.add('in-transition');
-  body.style.WebkitTransform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
-  body.style.MozTransform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
-  body.style.transform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
+    }
+    else
+        {
+                    document.getElementById("myBtn").style.color = "red";
 
-  window.setTimeout(function () {
-    body.classList.remove('in-transition');
-    body.style.cssText = "";
-    window.scrollTo(0, targetOffset);
-  }, animateTime);
-
-  event.preventDefault();
-
-}, false);
-
+        }
+    
+    
+    
+}
 
 
