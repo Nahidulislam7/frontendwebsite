@@ -87,12 +87,14 @@ function responsiveSlider() {
 
 };
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+    scrollFunction()
+};
 
 function scrollFunction() {
     if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
         document.getElementById("myBtn").style.display = "block";
-    
+
     } else {
         document.getElementById("myBtn").style.display = "none";
     }
@@ -104,23 +106,18 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
-function pad(){
+function pad() {
     var btn = document.getElementById("myBtn");
     var foot = document.getElementById("footer");
-    var footbottom =foot.Top;
-    
-        if (foot.Top > btn.bottom){
-        document.getElementById("myBtn").style.display = "none";
 
+    if (foot.offsetTop < btn.offsetTop) {
+        document.getElementById("myBtn").style.marginBottom("20%");
     }
-    else
-        {
-                    document.getElementById("myBtn").style.color = "red";
 
-        }
-    
-    
-    
+    else {
+         document.getElementById("myBtn").style.color("red");
+    }
+
+
+
 }
-
-
