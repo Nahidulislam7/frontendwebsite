@@ -1,5 +1,6 @@
 #**Designs**
-*inital rough design of website(turn on comments for annotations) invision link:
+
+-inital rough design of website(turn on comments for annotations) invision link:
 https://invis.io/ZPF0I42Q6
 
 #**Navigation plan**
