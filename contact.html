@@ -22,7 +22,7 @@
 <body>
     <nav class="mainnav" id="mainnav">
         <ul class="main-menu">
-            <li><a href="index.html" id="currentpage" class="currentpage">HOME</a></li>
+            <li><a href="index.html" id="currentpage">HOME</a></li>
 
             <li><a href="tvshows.html">TV SHOWS</a>
 
@@ -32,7 +32,7 @@
 
             <li><a href="comics.html">COMICS</a></li>
 
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="contact.html" class="currentpage">CONTACT</a></li>
 
             <li><a href="javascript:void(0);" id="navicon" class="navicon">&#9776;</a></li>
             <!-- icon that allows nav to collapse -->
@@ -62,23 +62,41 @@
             <input id="rating1" type="radio" name="rating" value="1">
             <label for="rating1">1</label>
             </span>
-        
-            <p id="message"></p>
+
+        <p id="message"></p>
 
     </header>
-    
+
 
 
     <section>
 
         <article class="contactintro">
+            <h2> Drop us a message</h2>
             <p>
-                ved not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                Fill out the form below:
             </p>
+            <form id="contact" action="" method="post">
+                <fieldset>
+                    <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+                </fieldset>
+                <fieldset>
+                    <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </fieldset>
+            </form>
         </article>
 
         <aside>
-            <ul>
+            <ul class="socialmedia">
 
                 <li><img src="images/socialmedia/Facebook.png" width="50" href="#"></li>
                 <li><img src="images/socialmedia/Instagram.png" width="50" href="#"></li>
@@ -94,6 +112,29 @@
             </ul>
 
         </aside>
+
+        <article class="contactdetails">
+            <section>
+                <h3>Call Us </h3>
+                <p><a href=#>019222323dsds</a></p>  
+            </section>
+            <section>
+                <h3>Email Us </h3>
+                <p><a href=#>nahidul_@gmail.com</a></p>
+            </section>
+            
+            
+            <h1>Google Maps API</h1>
+
+  <div id="map"></div>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH37X4oMIHd2mLe8ha65RwgOHOSBJASow&callback=initMap"></script>
+  <script src="javascript/scripts.js"></script>
+            
+        </article>
+
+
+
     </section>
 
 

@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+<head>
+    <title> DC Comics - Home </title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/comicscss.css">
+    <!-- comic page css -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jura:400,700" rel="stylesheet">
+    <script type="text/javascript" src="js/scriptfile.js"></script>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="application-name" content="DC COMICS">
+</head>
+
+
+<body>
+    <nav class="mainnav" id="mainnav">
+        <ul class="main-menu">
+            <li><a href="index.html" id="currentpage">HOME</a></li>
+
+            <li><a href="tvshows.html">TV SHOWS</a>
+
+            </li>
+
+            <li><img id="logo" class="logo" src="images/dclogo.png"></li>
+
+            <li><a href="comics.html" class="currentpage">COMICS</a></li>
+
+            <li><a href="contact.html">CONTACT</a></li>
+
+            <li><a href="javascript:void(0);" id="navicon" class="navicon">&#9776;</a></li>
+            <!-- icon that allows nav to collapse -->
+
+        </ul>
+
+
+    </nav>
+
+
+    <header>
+        <h1> COMICS</h1>
+
+        <form id="searchForm">
+
+            <input id="guardQuery" type="text" placeholder="Search a comic">
+            <input type="submit" value="Search">
+
+        </form>
+
+        <ul id="demo"></ul>
+
+
+    </header>
+
+    <article>
+        <span id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+            <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+            <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+            <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+        </span>
+
+        <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+        <div class="container">
+            <div class="filterDiv cars">BMW</div>
+            <div class="filterDiv colors fruits">Orange</div>
+            <div class="filterDiv cars">Volvo</div>
+            <div class="filterDiv colors">Red</div>
+            <div class="filterDiv cars animals">Mustang</div>
+            <div class="filterDiv colors">Blue</div>
+            <div class="filterDiv animals">Cat</div>
+            <div class="filterDiv animals">Dog</div>
+            <div class="filterDiv fruits">Melon</div>
+            <div class="filterDiv fruits animals">Kiwi</div>
+            <div class="filterDiv fruits">Banana</div>
+            <div class="filterDiv fruits">Lemon</div>
+            <div class="filterDiv animals">Cow</div>
+        </div>
+    </article>
+
+
+    <footer id="footer">
+        <p>Nahidul Islam DC Comics ®</p>
+    </footer>
+
+</body>
+
+</html>

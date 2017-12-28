@@ -1,7 +1,14 @@
-section {
-    display: flex;
-    flex-direction: row;
-}
+ section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+     flex-basis: 0;
+    }
+
+    
+   
+
 
 aside ul {
     list-style: none;
@@ -10,15 +17,16 @@ aside ul {
 }
 
 #message {
-        clear: both;
-        margin-right: 60px;
-        color: white;
-        margin: 0 auto;
-        margin-bottom: 20px;
-        text-align: center;
-        background-color:  #1a405e;
+    clear: both;
+    margin-right: 60px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #1a405e;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
-    }
+}
 
 
 /*--------------------------------------------------------------------------*/
@@ -27,8 +35,6 @@ aside ul {
 
     .contactheader {
         margin: 0 auto;
-        display: inline-flex;
-        flex-direction: row;
 
     }
     .contactheader h1 {
@@ -40,28 +46,20 @@ aside ul {
         padding-right: 50px;
     }
     .rating {
+        float: right;
+        position: relative;
         margin: 0 auto;
         display: block;
-        margin-top: -70px;
-        width: 20%;
-        
+        font-size: 30px;
+    }
+    
 
-
-
+    .rating:not(:checked) > label:before {
+        font-size: 30px;
 
     }
 
-    .contactintro {
-        clear: both;
-        width: 60%;
-        margin-left: 20px;
-    }
-
-    aside ul li {
-        display: inline-block;
-    }
-
-    aside {}
+   
 
 
 
@@ -75,39 +73,51 @@ aside ul {
         text-align: center;
         float: left;
         margin-left: 20px;
-        width: 30%;
+        position: absolute;
+        width: 50%;
+        font-size: 35px;
+
     }
-    
+
     .contactheader {
         margin: 0 auto;
+        
     }
 
     .rating {
         float: right;
         margin: 0 auto;
         display: block;
-        margin-top: 30px;
+        margin-top: 25px;
+        font-size: 15px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .rating:not(:checked) > label {
+
+        font-size: 20px;
+
+
     }
 
+
+    .rating:not(:checked) > label:before {
+        font-size: 20px;
+
+    }
+    
     .contactintro {
-        clear: both;
-        width: 60%;
-        margin-left: 20px;
-        float: left;
+        width: 70%;
+        margin-left: 5px;
     }
-
-    section {
-        display: block;
+    
+    .socialmedia li img{
+        height: 40px;
+        width: 40px;
     }
-
-    aside {
-        
-    }
-    aside ul li {
-        display: block;
-        margin-right: 50px;
-    }
-
+    
+    .contactdetails {
+    width: 200px;}
     
 
 }
@@ -115,33 +125,43 @@ aside ul {
 
 
 /*--------------------------------------------------------------------------*/
-
+#map {
+  height: 400px;
+  width: 50%;
+}
 .rating {
-    height: 46px;
     padding: 0 10px;
+
+
 }
 
 .rating:not(:checked) > input {
     position: absolute;
     top: -9999px;
+
 }
 
 .rating:not(:checked) > label {
-    float: left;
+    float: right;
     width: 1em;
     overflow: hidden;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 30px;
     color: #ccc;
+
+
 }
 
 .rating:not(:checked) > label:before {
     content: '★ ';
+
+
 }
 
 .rating > input:checked ~ label {
     color: #ffc700;
+
+
 }
 
 .rating:not(:checked) > label:hover,

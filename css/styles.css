@@ -93,7 +93,7 @@ p {
 
     .mainnav ul li {
         display: inline-block;
-        
+
 
     }
 
@@ -112,14 +112,14 @@ p {
         padding-top: 100%;
         padding-bottom: 100%;
         color: white;
-        	line-height: 60px;
-        
+        line-height: 60px;
+
 
     }
 
 
 
-    
+
 
     h1 {
         font-size: 80px;
@@ -482,22 +482,30 @@ h3 {
 
 #backtotopbtn {
     position: fixed;
-    top: auto;
-    left: auto;
     right: 0;
-    margin-bottom: 3%;
-    margin-right: 2%;
+    margin: 0 auto;
+    margin-right: 10px;
+    background-color: black;
     display: none;
+    padding-right: 30px;
     font-size: 40px;
-    border-radius: 50%;
     height: 60px;
     width: 60px;
-    background-color: black;
     color: white;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
-
+    background: #666;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 100%;
+    border: 3px solid #073763;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+    color: #fff;
+    height: 60px;
+    text-align: center;
+    transition: .5s;
+    vertical-align: middle;
+    width: 60px;
 
 
 
@@ -613,5 +621,3 @@ On click the images will be displayed at normal size to complete the effect
 /*Clicking on any thumbnail now should activate the image related to it*/
 
 /*We are done :)*/
-
-
