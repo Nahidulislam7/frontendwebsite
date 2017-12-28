@@ -1,9 +1,5 @@
 "use strict";
 
-function cc() {
-    document.getElementById("demo").innerHTML = "Hello World";
-}
-
 function collapsenav() { /*this function allows for the icon to collapse the nav for smaller devices*/
 
     var changenav = document.getElementById("mainnav");
@@ -32,24 +28,21 @@ function stickyscroll() {
     } else {
         navbar.classList.remove("sticky");
     }
+
+
 }
-
-
-
-
 
 window.onload = function () {
     document.addEventListener("scroll", stickyscroll);
     document.getElementById("navicon").addEventListener("click", collapsenav); /*when the icon is clicked the navigation collapses*/
-
     responsiveSlider();
-
+    pad();
 }
 
 function responsiveSlider() {
 
     var slider = document.getElementById("homeimageslider");
-    let sliderWidth = slider.offsetWidth;
+    var sliderWidth = slider.offsetWidth;
     var slideList = document.getElementById("slidecontent");
     var count = 1;
     var items = slideList.querySelectorAll("li").length;
@@ -100,11 +93,6 @@ window.onscroll = function () {
     scrollFunction()
 };
 
-window.onclick = function () {
-    
-    ratingcheck()
-};
-
 function scrollFunction() {
     if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
         document.getElementById("backtotopbtn").style.display = "block";
@@ -121,11 +109,12 @@ function topFunction() {
 }
 
 
-function ratingcheck() {
-    if (document.getElementById("rating5").checked) {
-                        document.getElementById("message").innerHTML = "Thank you for your response";
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open("GET", "https://api.twitter.com/1.1//statuses/mentions_timeline.json", false);
 
-    }
-    
-    
-}
+// Make sure you set the appropriate headers
+xmlHttp.setRequestHeader("Header Goes Here");
+
+xmlHttp.send(null);
+
+var response = xmlHttp.responseText;

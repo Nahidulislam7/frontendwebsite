@@ -1,0 +1,138 @@
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+aside ul {
+    list-style: none;
+    text-decoration: none;
+
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+@media screen and (min-width: 651px) {
+
+    .contactheader {
+        margin: 0 auto;
+
+    }
+    .contactheader h1 {
+        margin-left: 100px;
+        margin: 0 auto;
+        display: block;
+        margin-top: 20px;
+        margin-right: 0;
+        padding-right: 50px;
+    }
+    .rating {
+        float: right;
+        margin: 0 auto;
+        display: block;
+        margin-top: -70px;
+
+
+
+
+    }
+
+    .contactintro {
+        clear: both;
+        width: 60%;
+        margin-left: 20px;
+    }
+
+    aside ul li {
+        display: inline-block;
+    }
+
+
+
+
+}
+
+/*--------------------------------------------------------------------------*/
+
+@media screen and (max-width: 650px) {
+    .contactheader h1 {
+        text-align: center;
+        float: left;
+        margin-left: 20px;
+    }
+
+
+    .rating {
+        float: right;
+        margin: 0 auto;
+        display: block;
+        margin-top: 30px;
+    }
+
+    .contactintro {
+        clear: both;
+        width: 60%;
+        margin-left: 20px;
+        float: left;
+    }
+
+    section {
+        display: block;
+    }
+
+    aside {
+        float: right;
+
+    }
+    aside ul li {
+        display:block;
+        margin-right: 50px;
+    }
+
+
+}
+
+
+
+/*--------------------------------------------------------------------------*/
+
+.rating {
+    height: 46px;
+    padding: 0 10px;
+}
+
+.rating:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rating:not(:checked) > label {
+    float: left;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #ffc700;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
