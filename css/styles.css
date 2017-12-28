@@ -482,8 +482,6 @@ h3 {
 
 #backtotopbtn {
     position: fixed;
-    right: 0;
-    margin: 0 auto;
     margin-right: 10px;
     background-color: black;
     display: none;
@@ -502,7 +500,6 @@ h3 {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
     color: #fff;
     height: 60px;
-    text-align: center;
     transition: .5s;
     vertical-align: middle;
     width: 60px;
