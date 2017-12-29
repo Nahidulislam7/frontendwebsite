@@ -482,27 +482,19 @@ h3 {
 
 #backtotopbtn {
     position: fixed;
+    right: 0;
     margin-right: 10px;
-    background-color: black;
-    display: none;
-    padding-right: 30px;
-    font-size: 40px;
-    height: 60px;
-    width: 60px;
-    color: white;
-    text-decoration: none;
+    width: 50px;
+    line-height: 45px;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
     text-align: center;
-    cursor: pointer;
-    background: #666;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 100%;
-    border: 3px solid #073763;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
-    color: #fff;
-    height: 60px;
-    transition: .5s;
-    vertical-align: middle;
-    width: 60px;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    transform: translateY(-50%);
+    transition: all 150ms ease;
 
 
 
@@ -517,12 +509,12 @@ h3 {
     background: -webkit-linear-gradient(#073763, #3d85c6);
     border-radius: 1000px;
     box-shadow: 0 3px #444444;
-    padding: 4px 30px;
+    padding: 3px 30px;
     clear: both;
     color: #ffffff;
+    font-family: 'Jura', sans-serif;
     display: inline-block;
-    font: normal 700 25px/1 "Komika", cursive;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     text-decoration: none;
     display: block;
@@ -545,7 +537,7 @@ h3 {
     width: 100%;
     /*Same as width of the large image*/
     position: relative;
-    padding-top: 300px;
+    padding-top: 20%;
     /*Instead of height we will use padding*/
     /*Lets add a shadow*/
 }
@@ -575,19 +567,27 @@ h3 {
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    height: 80px;
     transition: all 0.5s;
-    margin-top: 200px;
+    width: 40%;
+    margin-top: 80%;
     margin-bottom: 50px;
 
     /*Default style = low opacity*/
     opacity: 0.6;
 }
 
+.shopiteminfo {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .slider label img {
-    display: block;
-    display: flex;
-    flex-direction: row;
+
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+
 }
 
 /*Time to add the click effects*/
@@ -618,3 +618,7 @@ On click the images will be displayed at normal size to complete the effect
 /*Clicking on any thumbnail now should activate the image related to it*/
 
 /*We are done :)*/
+
+.shopitem {
+    margin-bottom: 50px;
+}
