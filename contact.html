@@ -1,82 +1,86 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <title> DC Comics - Home </title>
+    <!-- main css -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- contact css -->
     <link rel="stylesheet" href="css/contactcss.css">
-
+    <!-- splashscreen for ios -->
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- imported google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Jura:400,700" rel="stylesheet">
-    <script type="text/javascript" src="js/scriptfile.js"></script>
+    <!-- main javascript -->
+    <script src="js/scriptfile.js"></script>
+    <!-- google api javascript -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH37X4oMIHd2mLe8ha65RwgOHOSBJASow&callback=initMap"></script>
     <meta charset="utf-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="application-name" content="DC COMICS">
 </head>
 
-
 <body>
+    <!-- navigation bar -->
     <nav class="mainnav" id="mainnav">
+
         <ul class="main-menu">
-            <li><a href="index.html" id="currentpage">HOME</a></li>
 
-            <li><a href="tvshows.html">TV SHOWS</a>
-
-            </li>
-
-            <li><img id="logo" class="logo" src="images/dclogo.png"></li>
-
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="tvshows.html">TV SHOWS</a></li>
+            <li><img id="logo" class="logo" src="images/dclogo.png" alt="nav logo"></li>
             <li><a href="comics.html">COMICS</a></li>
-
-            <li><a href="contact.html" class="currentpage">CONTACT</a></li>
-
-            <li><a href="javascript:void(0);" id="navicon" class="navicon">&#9776;</a></li>
+            <li><a href="contact.html" id="currentpage" class="currentpage">CONTACT</a></li>
             <!-- icon that allows nav to collapse -->
+            <li><a href="javascript:void(0);" id="navicon" class="navicon">&#9776;</a></li>
 
         </ul>
 
-
-
     </nav>
-
 
     <header class="contactheader">
         <h1> CONTACT US</h1>
-
-        <span class="rating">
-            <header> <h3> Rate us?</h3> </header>
-                    
+        <!--radio buttons for star rating -->
+        <aside id="rating" class="rating">
+            <h3> Rate us?</h3>
 
             <input id="rating5" type="radio" name="rating" value="5">
             <label for="rating5">5</label>
+
             <input id="rating4" type="radio" name="rating" value="4">
             <label for="rating4">4</label>
+
             <input id="rating3" type="radio" name="rating" value="3">
             <label for="rating3">3</label>
+
             <input id="rating2" type="radio" name="rating" value="2">
             <label for="rating2">2</label>
+
             <input id="rating1" type="radio" name="rating" value="1">
             <label for="rating1">1</label>
-            </span>
 
-        <p id="message"></p>
+        </aside>
+
+        <!-- p element used to store the response message for user ratings-->
+        <p id="message">
+        </p>
 
     </header>
 
-
-
-    <section>
+    <main>
 
         <article class="contactintro">
             <h2> Drop us a message</h2>
+
             <p>
                 Fill out the form below:
             </p>
-            <form id="contact" action="" method="post">
+
+            <!-- contact form requires all fields to be filled for data to be submitted -->
+            <form id="contact" method="post">
                 <fieldset>
                     <input placeholder="Your name" type="text" tabindex="1" required autofocus>
                 </fieldset>
@@ -93,58 +97,55 @@
                     <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
                 </fieldset>
             </form>
+
         </article>
 
         <aside>
+            <!-- unordered list that contains social media links and icons -->
             <ul class="socialmedia">
 
-                <li><img src="images/socialmedia/Facebook.png" width="50" href="#"></li>
-                <li><img src="images/socialmedia/Instagram.png" width="50" href="#"></li>
-                <li><img src="images/socialmedia/Pinterest.png" width="50" href="#"></li>
-                <li><img src="images/socialmedia/Snapchat.png" width="50" href="#"></li>
-                <li><img src="images/socialmedia/Twitter.png" width="50" href="#"></li>
-                <li><img src="images/socialmedia/Google+.png" width="50" href="#"></li>
-                <li><a href="#"><img src="images/socialmedia/YouTube.png" width="50"></a></li>
-
-
-
+                <li><a href="https://www.facebook.com/dccomics"><img src="images/socialmedia/Facebook.png" width="50" alt="facebook logo"></a></li>
+                <li><a href="https://plus.google.com/+DCComics"><img src="images/socialmedia/Google+.png" width="50" alt="google + logo"></a></li>
+                <li><a href="https://www.instagram.com/dccomics/?hl=en"><img src="images/socialmedia/Instagram.png" width="50" alt="instagram logo"></a></li>
+                <li><a href="https://www.pinterest.co.uk/dccomics"><img src="images/socialmedia/Pinterest.png" width="50" alt="pininterest logo"></a></li>
+                <li><a href="https://www.snapchat.com/l/en-gb/"><img src="images/socialmedia/Snapchat.png" width="50" alt="snapchat logo"></a></li>
+                <li><a href="https://twitter.com/DCComics?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="images/socialmedia/Twitter.png" width="50" alt="twitter logo"></a></li>
+                <li><a href="https://www.youtube.com/channel/UCiifkYAs_bq1pt_zbNAzYGg"><img src="images/socialmedia/YouTube.png" width="50" alt="youtube logo"></a></li>
 
             </ul>
 
         </aside>
 
         <article class="contactdetails">
+            <h2> Our contact details </h2>
+
             <section>
                 <h3>Call Us </h3>
-                <p><a href=#>019222323dsds</a></p>  
+                <p>
+                    <!-- opens up in call app when clicked -->
+                    <a href="tel:08000696172">0800 069 6172</a>
+                </p>
             </section>
+
             <section>
                 <h3>Email Us </h3>
-                <p><a href=#>nahidul_@gmail.com</a></p>
+                <p>
+                    <!-- opens up in mailbox when clicked -->
+                    <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Dccomics@email.com</a>
+                </p>
             </section>
-            
-            
-            <h1>Google Maps API</h1>
 
-  <div id="map"></div>
-
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH37X4oMIHd2mLe8ha65RwgOHOSBJASow&callback=initMap"></script>
-  <script src="javascript/scripts.js"></script>
-            
+            <!-- div tag wil be used to display google maps -->
+            <div id="map"></div>
         </article>
 
+    </main>
 
+    <!-- button that takes user to top of the page when clicked -->
+    <aside class="backtotop">
+        <button id="backtotopbtn" title="Go to top">&#8679;</button>
 
-    </section>
-
-
-
-
-
-    <section class="backtotop">
-        <button onclick="topFunction()" href="#" id="backtotopbtn" title="Go to top">&#8679 </button>
-
-    </section>
+    </aside>
 
     <footer id="footer">
         <p>Nahidul Islam DC Comics ®</p>

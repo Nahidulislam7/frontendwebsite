@@ -1,29 +1,20 @@
-"use strict";
-
-function cc() {
-    document.getElementById("demo").innerHTML = "Hello World";
-}
-
-function collapsenav() { /*this function allows for the icon to collapse the nav for smaller devices*/
-
-    var changenav = document.getElementById("mainnav");
+function collapsenav() { 
+    let changenav = document.getElementById("mainnav");
+    
     if (changenav.className === "mainnav") {
         changenav.className += " responsivenav";
-
-
-    } else {
+    } 
+    else {
         changenav.className = "mainnav";
-
     }
-
 }
 
 
 
-
+/*this function allows for the navigation bar to stick to the top of the window*/
 function stickyscroll() {
-    var navbar = document.getElementById("mainnav"); /*this function allows for the navigation bar to stick to the top of the window*/
-    var sticky = navbar.offsetTop;
+    let navbar = document.getElementById("mainnav"); 
+    let sticky = navbar.offsetTop;
     const slides = document.getElementsByClassName("banner");
 
     if (window.pageYOffset >= sticky) {
@@ -41,7 +32,7 @@ function stickyscroll() {
 window.onload = function () {
     document.addEventListener("scroll", stickyscroll);
     document.getElementById("navicon").addEventListener("click", collapsenav); /*when the icon is clicked the navigation collapses*/
-
+    document.getElementById("backtotopbtn").addEventListener("click", topFunction);
     responsiveSlider();
 
 }
@@ -98,11 +89,13 @@ function responsiveSlider() {
 
 window.onscroll = function () {
     scrollFunction()
+
 };
 
 window.onclick = function () {
 
     ratingcheck()
+
 };
 
 function scrollFunction() {
@@ -122,18 +115,21 @@ function topFunction() {
 
 
 function ratingcheck() {
-    if (document.getElementById("rating5").checked) {
-        document.getElementById("message").innerHTML = "Thank you for your response";
 
+    let span = document.getElementById("rating");
+    let inputs = span.getElementsByTagName("input");
+    for (let i = 0; i < inputs.length; ++i) {
+        if (inputs[i].checked) {
+            document.getElementById("message").innerHTML = "Thank you for your response";
+
+        }
     }
-
 
 }
 
 
-"use strict";
-
 function initMap() {
+    "use strict";
     let leicester = {
         lat: 52.6333,
         lng: -1.1333

@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
+/*get rid of any default margin*/
 
 body {
     margin: 0;
-
 }
 
 p {
@@ -11,9 +11,7 @@ p {
 
 }
 
-#scrollButton {
-    text-align: center;
-}
+/*styling for navigation bar*/
 
 .mainnav {
     background-color: #1a405e;
@@ -27,13 +25,7 @@ p {
     list-style-type: none;
     margin: 0;
     padding: 0;
-
-
-
 }
-
-
-
 
 .mainnav ul li a {
     font-family: 'Jura', sans-serif;
@@ -46,8 +38,6 @@ p {
 
 }
 
-
-
 .mainnav ul .navicon {
     display: none;
     top: 0;
@@ -57,6 +47,8 @@ p {
 .mainnav .navicon:hover {
     display: block;
 }
+
+/*making logo fit the navbar*/
 
 .logo {
     height: 50px;
@@ -68,23 +60,51 @@ p {
 
 
 
+/*styling for headings*/
+
+h1 {
+    font-family: 'Squada One', cursive;
+    text-align: center;
+    color: #1a405e;
+    text-shadow: 1px -1px 1px rgba(0, 0, 0, 1);
+    font-style: oblique;
+    line-height: 1;
+}
+
+h2 {
+    font-family: 'Squada One', cursive;
+    text-align: center;
+    color: #1a405e;
+    font-style: oblique;
+    line-height: 1;
+
+}
+
+h3 {
+    font-family: 'Squada One', cursive;
+    text-align: center;
+    color: #1a405e;
+    line-height: 1;
+    margin: 0;
+}
 
 
 /*--------------------------------------------------------------------------*/
 
+/*breakpoint for larger screen size devices*/
+
 @media screen and (min-width: 651px) {
-    /*breakpoint for larger screen size devices*/
+
+    /*to make the navbar stick to the top of the browser window */
     .sticky {
         position: fixed;
         top: 0;
         width: 100%;
-
-
     }
 
+    /*to stop the image slider from being overlapped by the navbar when scrolling back up*/
     .sticky + header {
         padding-top: 77px;
-
     }
 
     .mainnav {
@@ -93,16 +113,12 @@ p {
 
     .mainnav ul li {
         display: inline-block;
-
-
     }
 
 
     .mainnav ul li a:hover {
         color: black;
         background-color: #d1e8ff;
-
-
     }
 
 
@@ -113,70 +129,51 @@ p {
         padding-bottom: 100%;
         color: white;
         line-height: 60px;
-
-
     }
 
-
-
-
-
+    /*make font sizes bigger for larger screens*/
     h1 {
         font-size: 80px;
     }
 
-
     h2 {
         font-size: 40px;
-
     }
 
     .homearticle header {
         margin-bottom: -30px;
-
     }
 
+    /*using flexbox to make sections in the article appear in a row*/
     .homearticle {
         display: flex;
         flex-direction: row;
         margin-top: -20px;
     }
 
-
-
-
-
     .homebanner h1 {
         margin-bottom: 20px;
-
     }
 
+    /*giving the sections in the article a equal width*/
     .homearticle .left-col,
     .right-col,
     .cent-col {
         width: 30%;
         margin: auto;
-
-
     }
 
-
+    /*setting a height for each sections articles*/
     .homearticle .left-col article,
     .right-col article,
     .cent-col article {
         height: 800px;
-
-
-
-
     }
 
-
-
+    /*padding to stop button from overlapping the footer*/
     #backtotopbtn {
         bottom: 100px;
     }
-
 
 }
 
@@ -184,19 +181,20 @@ p {
 
 /*--------------------------------------------------------------------------*/
 
+/*breakpoint for smaller screen sizes*/
+
 @media screen and (max-width: 650px) {
-    /*breakpoint for smaller screen sizes*/
+
+    /*stopping links from the navbar from being displayed */
     .mainnav ul li a {
         display: none;
-
-
     }
 
     .navicon {
         color: #ffffff;
-
     }
 
+    /*making the sections in the article appear in a column using flex*/
     .homearticle {
         display: flex;
         flex-direction: column;
@@ -207,59 +205,45 @@ p {
     .right-col article,
     .cent-col article {
         height: 300px;
-
-
-
-
     }
 
     .homearticle {
         margin: 20px;
         margin-top: -10px;
-
-
     }
 
+    /*styling for collapsed nav*/
     .mainnav a.navicon {
         float: left;
         display: block;
         height: 40px;
         color: white;
-
     }
 
+    /*changing the color of the link to show what page the user is on*/
     .currentpage {
         background-color: black;
         color: white;
-
     }
+
+    /*hover effect applied to all list items except from navicon*/
     .mainnav ul li:hover:not(:last-child) {
         background-color: grey;
         color: black;
     }
 
-
     .mainnav.responsivenav {
         position: relative;
-
-
-
-
-
     }
 
     .mainnav.responsivenav ul {
         top: 0;
         margin-top: 0;
-
     }
+
     .mainnav.responsivenav ul li a.navicon {
         position: absolute;
         top: 0;
-
-
-
-
     }
 
     .mainnav.responsivenav ul li a {
@@ -267,25 +251,18 @@ p {
         display: block;
         text-align: right;
         height: 40px;
-
-
-
-
-
-
-
-
     }
 
+    /*hiding the image logo*/
     #logo {
         display: none;
     }
 
     h1 {
         font-size: 40px;
-
     }
 
+    /*making each section of the article fit the whole screen width*/
     .homearticle .left-col,
     .right-col,
     .cent-col {
@@ -296,26 +273,11 @@ p {
         bottom: 120px;
     }
 
-
-
-
 }
 
 /*--------------------------------------------------------------------------*/
 
-.imagesliderhome {
-    margin-bottom: 200px;
-    width: 100%;
-}
-
-.banner {
-    width: 100%;
-    position: absolute;
-}
-
-.content p {
-    margin-top: 500px;
-}
+/*styling for footer*/
 
 footer {
     margin-top: 100px;
@@ -334,16 +296,15 @@ footer p {
     margin-top: 30px;
 }
 
+/*styling for image slider*/
 
 #homeimageslider {
     position: relative;
     overflow: hidden;
     margin-bottom: 0px;
-
-
-
-
 }
+
+/*adding transition between images*/
 
 #homeimageslider ul {
     position: relative;
@@ -353,28 +314,23 @@ footer p {
     padding: 0;
     margin: 0;
     transition: all 750ms ease;
-
-
-
-
-
 }
+
+/*to ensure images fill the holder*/
 
 #homeimageslider li {
     position: relative;
     height: 100%;
     width: calc(100vw);
     float: left;
-
-
 }
 
 #homeimageslider img {
     width: 100%;
     height: 100%;
-
-
 }
+
+/*styling image slider buttons */
 
 #prev,
 #next {
@@ -391,17 +347,14 @@ footer p {
     top: 50%;
     transform: translateY(-50%);
     transition: all 150ms ease;
-
 }
 
 #prev:hover {
     background-color: rgba(0, 0, 0, 0.5);
-    text-shadow: 0;
 }
 
 #next:hover {
     background-color: rgba(0, 0, 0, 0.5);
-    text-shadow: 0;
 }
 
 
@@ -409,63 +362,23 @@ footer p {
     left: 10px;
 }
 
-
 #next {
     right: 10px;
 }
 
-
-
-h1 {
-    font-family: 'Squada One', cursive;
-    text-align: center;
-    color: #1a405e;
-    text-shadow: 1px -1px 1px rgba(0, 0, 0, 1);
-    font-style: oblique;
-    line-height: 1;
-}
-
-h2 {
-    font-family: 'Squada One', cursive;
-    text-align: center;
-    color: #1a405e;
-    text-shadow: 1px rgba(0, 0, 0, 1);
-    font-style: oblique;
-    line-height: 1;
-
-}
-
-h3 {
-    font-family: 'Squada One', cursive;
-    text-align: center;
-    color: #1a405e;
-    text-shadow: 1px rgba(0, 0, 0, 1);
-    line-height: 1;
-    margin: 0;
-
-
-
-}
-
+/*giving the split article a border*/
 
 .homearticle .left-col,
 .right-col,
 .cent-col {
-
     box-sizing: border-box;
-
-
 }
 
 .homearticle h3 {
     color: black;
     font-style: italic;
     font-size: 20px;
-
 }
-
-
-
 
 .homearticle .left-col article,
 .right-col article,
@@ -475,10 +388,9 @@ h3 {
     padding: 10px;
     border-radius: 5px;
     overflow: auto;
-
-
-
 }
+
+/*styling for back to top button*/
 
 #backtotopbtn {
     position: fixed;
@@ -495,18 +407,17 @@ h3 {
     text-decoration: none;
     transform: translateY(-50%);
     transition: all 150ms ease;
-
-
-
+    display: none;
 }
 
 #backtotopbtn:hover {
     background-color: #555;
 }
 
-#buy {
+/*styling for purchase button*/
+
+.buy {
     background: #073763;
-    background: -webkit-linear-gradient(#073763, #3d85c6);
     border-radius: 1000px;
     box-shadow: 0 3px #444444;
     padding: 3px 30px;
@@ -523,27 +434,21 @@ h3 {
 
 }
 
-#buy:hover {
+.buy:hover {
     background: grey;
 }
 
-
-
-/*Time for the CSS*/
+/*using flex to make thumbnails responsive*/
 
 .slider {
     margin: 0 auto;
     display: flex;
     width: 100%;
-    /*Same as width of the large image*/
     position: relative;
     padding-top: 20%;
-    /*Instead of height we will use padding*/
-    /*Lets add a shadow*/
 }
 
-
-/*Last thing remaining is to add transitions*/
+/*transitions for switching between images*/
 
 .slider > img {
     width: inherit;
@@ -557,10 +462,9 @@ h3 {
     display: none;
 }
 
-
+/*stying the thumbnails*/
 
 .slider label {
-    /*Lets add some spacing for the thumbnails*/
     margin: 18px 0 0 18px;
     border: 3px solid #999;
     margin: 0 auto;
@@ -571,8 +475,6 @@ h3 {
     width: 40%;
     margin-top: 80%;
     margin-bottom: 50px;
-
-    /*Default style = low opacity*/
     opacity: 0.6;
 }
 
@@ -583,42 +485,29 @@ h3 {
 }
 
 .slider label img {
-
     margin: 0 auto;
     width: 100%;
     height: 100%;
-
 }
 
-/*Time to add the click effects*/
+/*increase opacity for when thumbnail is clicked*/
 
 .slider input[name='slide_switch']:checked + label {
     border-color: #666;
     opacity: 1;
 }
 
-/*Clicking any thumbnail now should change its opacity(style)*/
 
-/*Time to work on the main images*/
+/*changing the opacity of thumbnails*/
 
 .slider input[name='slide_switch'] ~ img {
     opacity: 0;
     transform: scale(1.1);
 }
 
-/*That hides all main images at a 110% size
-On click the images will be displayed at normal size to complete the effect
-*/
+/*transition effect when switching between images*/
 
 .slider input[name='slide_switch']:checked + label + img {
     opacity: 1;
     transform: scale(1);
-}
-
-/*Clicking on any thumbnail now should activate the image related to it*/
-
-/*We are done :)*/
-
-.shopitem {
-    margin-bottom: 50px;
 }

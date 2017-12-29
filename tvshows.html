@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html>
 
 <head>
     <title> DC Comics - Home </title>
@@ -11,13 +11,14 @@
     <link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Jura:400,700" rel="stylesheet">
     <!-- main javascript -->
-    <script src="js/scriptfile.js"></script>
+    <script type="text/javascript" src="js/scriptfile.js"></script>
     <!-- twitter widget javascript -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <meta charset="utf-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="application-name" content="DC COMICS">
 </head>
 
@@ -29,7 +30,7 @@
 
             <li><a href="index.html" id="currentpage" class="currentpage">HOME</a></li>
             <li><a href="tvshows.html">TV SHOWS</a></li>
-            <li><img id="logo" class="logo" src="images/dclogo.png" alt="nav logo"></li>
+            <li><img id="logo" class="logo" src="images/dclogo.png"></li>
             <li><a href="comics.html">COMICS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
             <!-- icon that allows nav to collapse -->
@@ -42,29 +43,26 @@
     <!-- banner for homepage -->
     <header class="homebanner">
 
-        <div id="homeimageslider">
+        <section id="homeimageslider">
 
             <!-- slideshow of images within the list -->
             <ul id="slidecontent">
 
-                <li><img src="images/homebanner/bannerhome2.jpg" alt="banner pic 1"></li>
-                <li><img src="images/homebanner/bannerhome.jpg" alt="banner pic 2"></li>
-                <li><img src="images/homebanner/bannerhome3.jpg" alt="banner pic 3"></li>
+                <li><img src="images/homebanner/bannerhome2.jpg" alt=""></li>
+                <li><img src="images/homebanner/bannerhome.jpg" alt ""></li>
+                <li><img src="images/homebanner/bannerhome3.jpg" alt ""></li>
 
             </ul>
 
+            <!-- Left and right buttons for image slider -->
+            <a id="prev" href="#">&#8810;</a>
+            <a id="next" href="#">&#8811;</a>
 
-            <aside>
-                <!-- Left and right buttons for image slider -->
-                <a id="prev" href="#">&#8810;</a>
-                <a id="next" href="#">&#8811;</a>
-            </aside>
+        </section>
 
-        </div>
-
-        <article>
+        <header>
             <h1> WELCOME TO DC</h1>
-        </article>
+        </header>
 
     </header>
 
@@ -103,8 +101,6 @@
                 <h2>Updates</h2>
             </header>
             <article>
-                <h3>Latest Tweets</h3>
-
                 <!-- imports twitter timeline -->
                 <a class="twitter-timeline" href="https://twitter.com/DCComics?ref_src=twsrc%5Etfw">Tweets by DCComics</a>
             </article>
@@ -115,42 +111,75 @@
                 <h2>Shop</h2>
             </header>
             <article>
-                <h3> Buy some merch </h3>
+                <section class = "shopitem">
+                    <h3>DC Comics Harley Quinn and Joker T Shirt (Black) </h3>
 
-                <h3>DC Comics Harley Quinn and Joker T Shirt (Black) </h3>
 
-                    <!--image slider that uses radio buttons to display thumbnails -->
-                <div class="slider">
-                    <!-- show first image -->
-                    <input type="radio" name="slide_switch" id="id1" checked="checked" />
-                    <label for="id1">
-                        <img src="images/shop/item1.jpg" width="100" alt="item 1" />
+                    <div class="slider">
+                        <input type="radio" name="slide_switch" id="id1" checked="checked"/>
+                        <label for="id1">
+                        <img src="images/shop/item1.jpg" width="100" />
                     </label>
-                    <img class="mainimgshop" src="images/shop/item1.jpg" width="20" alt="item 1" />
-                    <!--show second image-->
-                    <input type="radio" name="slide_switch" id="id2" />
-                    <label for="id2">
-                        <img class="mainimgshop" src="images/shop/item1.2.jpg" width="100" alt="item 1 back" />
+                        <img class="mainimgshop" src="images/shop/item1.jpg" width="20" />
+
+                        <!--Lets show the second image by default on page load-->
+                        <input type="radio" name="slide_switch" id="id2"/>
+                        <label for="id2">
+                        <img class="mainimgshop" src="images/shop/item1.2.jpg" width="100" />
                     </label>
-                    <img src="images/shop/item1.2.jpg" alt="item 1 back" />
+                        <img src="images/shop/item1.2.jpg" />
 
-                </div>
+                    </div>
 
-                <p class="shopiteminfo">This officially licensed superhero t shirt features both Harley Quinn and the Joker, the two most famous villains in the Batman universe. With artwork from the DC Comics graphic novel, Batman: Harley Quinn, this is one tee for the hardcore fans
-                </p>
 
-                <a href='https://www.bluebanana.com/en/product/1021554/53/dc-comics-harley-quinn-and-joker-black-t-shirt?jssCart=8349cd3dd8fff0afc6599eb5ff81c785' class="buy">Purchase</a>
+
+                    <p class="shopiteminfo">This officially licensed superhero t shirt features both Harley Quinn and the Joker, the two most famous villains in the Batman universe. With artwork from the DC Comics graphic novel, Batman: Harley Quinn, this is one tee for the hardcore fans
+                    </p>
+
+                    <a href='https://www.bluebanana.com/en/product/1021554/53/dc-comics-harley-quinn-and-joker-black-t-shirt?jssCart=8349cd3dd8fff0afc6599eb5ff81c785' id="buy">Purchase</a>
+
+                </section>
                 
+                <section class = "shopitem">
+                    <h3>DC Comics Harley Quinn and Joker T Shirt (Black) </h3>
+
+
+                    <div class="slider">
+                        <input type="radio" name="slide_switch" id="id3" checked="checked"/>
+                        <label for="id3">
+                        <img src="images/homebanner/bannerhome.jpg" width="100" />
+                    </label>
+                        <img class="mainimgshop" src="images/homebanner/bannerhome.jpg" width="20" />
+
+                        <!--Lets show the second image by default on page load-->
+                        <input type="radio" name="slide_switch" id="id4"/>
+                        <label for="id4">
+                        <img class="mainimgshop" src="images/dclogo.png" width="100" />
+                    </label>
+                        <img src="images/dclogo.png" />
+
+                    </div>
+
+
+
+                    <p class="shopiteminfo">This officially licensed superhero t shirt features both Harley Quinn and the Joker, the two most famous villains in the Batman universe. With artwork from the DC Comics graphic novel, Batman: Harley Quinn, this is one tee for the hardcore fans
+                    </p>
+
+                    <a href='https://www.bluebanana.com/en/product/1021554/53/dc-comics-harley-quinn-and-joker-black-t-shirt?jssCart=8349cd3dd8fff0afc6599eb5ff81c785' id="buy">Purchase</a>
+
+                </section>
+
+
             </article>
         </section>
 
     </main>
 
-    <!-- button that takes user to top of the page when clicked -->
-    <aside class="backtotop">
-        <button id="backtotopbtn" title="Go to top">&#8679;</button>
+    <!-- button that -->
+    <section class="backtotop">
+        <button onclick="topFunction()" href="#" id="backtotopbtn" title="Go to top">&#8679 </button>
 
-    </aside>
+    </section>
 
     <footer id="footer">
         <p>Nahidul Islam DC Comics ®</p>
