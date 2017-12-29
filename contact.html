@@ -75,28 +75,22 @@
         <article class="contactintro">
             <h2> Drop us a message</h2>
 
-            <p>
+            <p id="instructions">
                 Enter a few details and hit the 'submit' button
             </p>
 
             <!-- contact form requires all fields to be filled for data to be submitted -->
-            <form id="contact" method="post">
-                <fieldset>
-                    <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-                </fieldset>
-                <fieldset>
-                    <input placeholder="Your Email Address" type="email" tabindex="2" required>
-                </fieldset>
-                <fieldset>
-                    <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
-                </fieldset>
-                <fieldset>
-                    <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
-                </fieldset>
-                <fieldset>
-                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-                </fieldset>
+            <form id="contact" action="#" method="post" onsubmit="return false">
+                <input placeholder="Your name" id="username" type="text" tabindex="1" required autofocus>
+                <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+                <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+                <button type="submit" id="contact-submit">Submit</button>
             </form>
+
+            <!-- p element used to store the response message for form submit response-->
+            <p id="message2">
+            </p>
 
         </article>
 

@@ -34,11 +34,11 @@ aside ul {
         justify-content: space-around;
         flex-basis: 0;
     }
-    
+
     .contactheader {
         margin: 0 auto;
     }
-    
+
     .contactheader h1 {
         margin-left: 100px;
         margin: 0 auto;
@@ -47,7 +47,7 @@ aside ul {
         margin-right: 0;
         padding-right: 50px;
     }
-    
+
     .rating {
         float: right;
         position: relative;
@@ -62,12 +62,34 @@ aside ul {
 
     }
 
+    #contact {
+        position: relative;
+        display: block;
+    }
+
     #contact input {
-        height: 20px;
+        margin: 0 auto;
+        height: 30px;
+        width: 90%;
+        position: relative;
+        display: block;
+        margin-bottom: 10px;
     }
 
     #contact textarea {
+        margin: 0 auto;
+        width: 90%;
         height: 200px;
+        position: relative;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #contact button {
+        margin: 0 auto;
+        display: block;
+        padding: 20px;
+        width: 40%;
     }
 
     .contactintro {
@@ -164,6 +186,36 @@ aside ul {
 
     }
 
+    #contact {
+        position: relative;
+        display: block;
+    }
+
+
+    #contact input {
+        height: 30px;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        margin-bottom: 5px;
+    }
+
+    #contact textarea {
+        height: 200px;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    #contact button {
+        margin: 0 auto;
+        display: block;
+        padding: 10px;
+        width: 40%;
+    }
 
     .rating:not(:checked) > label:before {
         font-size: 20px;

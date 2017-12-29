@@ -1,10 +1,9 @@
-function collapsenav() { 
+function collapsenav() {
     let changenav = document.getElementById("mainnav");
-    
+
     if (changenav.className === "mainnav") {
         changenav.className += " responsivenav";
-    } 
-    else {
+    } else {
         changenav.className = "mainnav";
     }
 }
@@ -13,7 +12,7 @@ function collapsenav() {
 
 /*this function allows for the navigation bar to stick to the top of the window*/
 function stickyscroll() {
-    let navbar = document.getElementById("mainnav"); 
+    let navbar = document.getElementById("mainnav");
     let sticky = navbar.offsetTop;
     const slides = document.getElementsByClassName("banner");
 
@@ -33,9 +32,13 @@ window.onload = function () {
     document.addEventListener("scroll", stickyscroll);
     document.getElementById("navicon").addEventListener("click", collapsenav); /*when the icon is clicked the navigation collapses*/
     document.getElementById("backtotopbtn").addEventListener("click", topFunction);
+    document.getElementById("contact").addEventListener("submit", PerformGreeting);
     responsiveSlider();
 
+
 }
+
+
 
 function responsiveSlider() {
 
@@ -128,6 +131,21 @@ function ratingcheck() {
 }
 
 
+
+function PerformGreeting(ev) {
+
+    let name = document.getElementById("username");
+    let subname = name.value;
+    document.getElementById("message2").innerHTML = "Thank you for your message" + " " + subname;
+    document.getElementById("contact").style.display = "none";
+    document.getElementById("instructions").style.display = "none";
+
+
+
+}
+
+
+
 function initMap() {
     "use strict";
     let leicester = {
@@ -138,7 +156,7 @@ function initMap() {
         lat: 34.148655,
         lng: -118.338719
     };
-    
+
     let mapDemo = document.getElementById("map");
 
     // this sets th default location for when the map is first loaded
@@ -153,5 +171,5 @@ function initMap() {
         map: map,
         title: 'The Good Guys'
     });
-    
+
 }
