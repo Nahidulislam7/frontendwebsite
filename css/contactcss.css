@@ -1,20 +1,12 @@
- main {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-     flex-basis: 0;
-    }
-
-    
-   
-
+@charset "UTF-8";
 
 aside ul {
     list-style: none;
     text-decoration: none;
 
 }
+
+/*css for star rating response message*/
 
 #message {
     clear: both;
@@ -28,15 +20,25 @@ aside ul {
 
 }
 
+/*--------------------------------------------------------------------------*/
 
 /*--------------------------------------------------------------------------*/
 
-@media screen and (min-width: 651px) {
+/*breakpoint for larger devices using flex to display elements*/
 
+@media screen and (min-width: 651px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-basis: 0;
+    }
+    
     .contactheader {
         margin: 0 auto;
-
     }
+    
     .contactheader h1 {
         margin-left: 100px;
         margin: 0 auto;
@@ -45,6 +47,7 @@ aside ul {
         margin-right: 0;
         padding-right: 50px;
     }
+    
     .rating {
         float: right;
         position: relative;
@@ -52,14 +55,65 @@ aside ul {
         display: block;
         font-size: 30px;
     }
-    
+
 
     .rating:not(:checked) > label:before {
         font-size: 30px;
 
     }
 
-   
+    #contact input {
+        height: 20px;
+    }
+
+    #contact textarea {
+        height: 200px;
+    }
+
+    .contactintro {
+        margin: 0 auto;
+        display: block;
+        width: 50%;
+
+    }
+
+    .socialmedia {
+        margin-top: 100px;
+        width: 600px;
+    }
+
+    .socialmedia li {
+        display: inline-block;
+        padding: 5px;
+    }
+
+    .socialmedia li img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .contactdetails {
+        width: 500px;
+
+    }
+
+    .contactintro p {
+        text-align: center;
+    }
+
+    .contactdetails section p {
+        text-align: center;
+    }
+
+    #map {
+        margin: 0 auto;
+        height: 600px;
+        width: 80%;
+        margin-top: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
 
 
 
@@ -68,7 +122,17 @@ aside ul {
 
 /*--------------------------------------------------------------------------*/
 
+/*--------------------------------------------------------------------------*/
+
 @media screen and (max-width: 650px) {
+
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-basis: 0;
+    }
     .contactheader h1 {
         text-align: center;
         float: left;
@@ -81,7 +145,7 @@ aside ul {
 
     .contactheader {
         margin: 0 auto;
-        
+
     }
 
     .rating {
@@ -105,30 +169,43 @@ aside ul {
         font-size: 20px;
 
     }
-    
+
     .contactintro {
         width: 70%;
         margin-left: 5px;
     }
-    
-    .socialmedia li img{
+
+    .socialmedia li img {
         height: 40px;
         width: 40px;
     }
-    
+
     .contactdetails {
-    width: 200px;}
-    
+        width: 200px;
+    }
+
+    .contactintro p {
+        text-align: center;
+    }
+
+    .contactdetails section p {
+        text-align: center;
+    }
+
+    #map {
+        height: 400px;
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
 
 }
 
 
 
 /*--------------------------------------------------------------------------*/
-#map {
-  height: 400px;
-  width: 50%;
-}
+
 .rating {
     padding: 0 10px;
 

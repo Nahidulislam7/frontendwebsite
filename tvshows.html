@@ -1,24 +1,25 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
-    <title> DC Comics - Tv Shows </title>
+    <title> DC Comics - Comics </title>
     <!-- main css -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- comics css -->
+    <link rel="stylesheet" href="css/comicscss.css">
     <!-- splashscreen for ios -->
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <!-- imported google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Jura:400,700" rel="stylesheet">
     <!-- main javascript -->
-    <script type="text/javascript" src="js/scriptfile.js"></script>
+    <script src="js/scriptfile.js"></script>
     <!-- twitter widget javascript -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <meta charset="utf-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="application-name" content="DC COMICS">
 </head>
 
@@ -28,9 +29,9 @@
 
         <ul class="main-menu">
 
-            <li><a href="index.html" id="currentpage" class="currentpage">HOME</a></li>
-            <li><a href="tvshows.html">TV SHOWS</a></li>
-            <li><img id="logo" class="logo" src="images/dclogo.png"></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="tvshows.html" id="currentpage" class="currentpage">TV SHOWS</a></li>
+            <li><img id="logo" class="logo" src="images/dclogo.png" alt="nav logo"></li>
             <li><a href="comics.html">COMICS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
             <!-- icon that allows nav to collapse -->
@@ -40,146 +41,12 @@
 
     </nav>
 
-    <!-- banner for homepage -->
-    <header class="homebanner">
 
-        <section id="homeimageslider">
+    <!-- button that takes user to top of the page when clicked -->
+    <aside class="backtotop">
+        <button id="backtotopbtn" title="Go to top">&#8679;</button>
 
-            <!-- slideshow of images within the list -->
-            <ul id="slidecontent">
-
-                <li><img src="images/homebanner/bannerhome2.jpg" alt=""></li>
-                <li><img src="images/homebanner/bannerhome.jpg" alt ""></li>
-                <li><img src="images/homebanner/bannerhome3.jpg" alt ""></li>
-
-            </ul>
-
-            <!-- Left and right buttons for image slider -->
-            <a id="prev" href="#">&#8810;</a>
-            <a id="next" href="#">&#8811;</a>
-
-        </section>
-
-        <header>
-            <h1> WELCOME TO DC</h1>
-        </header>
-
-    </header>
-
-    <main class="homearticle">
-
-        <!-- Article divided into three sections -->
-        <section class="left-col">
-            <header>
-                <h2>Overview</h2>
-            </header>
-            <article>
-                <h3>History</h3>
-                <p>
-                    DC Comics is one of the largest American companies in comic books and related media publishing. A subsidiary of Time Warner, DC is responsible for such famous characters as Superman, Batman, Wonder Woman, Green Lantern, The Flash, Aquaman and their teammates in the Justice League. For decades, DC Comics has been one of the two largest American comic book companies, along with Marvel Comics. The initials "DC" were originally an abbreviation for Detective Comics, and later the official name.
-                    <br>
-                    <br> Originally located in New York City at 432 Fourth Avenue, DC has been successively headquartered at 480 and later 575 Lexington Avenue; 909 Third Avenue; 75 Rockefeller Plaza; 666 Fifth Avenue; and 1325 Avenue of the Americas (in 1992). DC took over several floors when it moved to 1700 Broadway in the mid-1990s, relocating there with fellow Time Warner property MAD Magazine, which moved there from 485 Madison Avenue.
-                </p>
-                <h3>Origins</h3>
-                <p>
-                    The corporation is an amalgamation of several companies. National Allied Publications was founded by Major Malcolm Wheeler-Nicholson in 1934 to publish Fun: The Big Comic Magazine #1 (Feb. 1935), later known as New Fun and More Fun. The first American comic book with solely original material rather than comic strip reprints, it was a tabloid-sized, 10-inch by 15-inch, 36-page magazine with a card-stock, non-glossy cover. Issue #6 (Oct. 1935) brought the comic-book debut of Jerry Siegel and Joe Shuster, the future creators of Superman, who began their careers with the musketeer swashbuckler "Henri Duval" and, under the pseudonyms "Leger and Reuths", the supernatural-crimefighter adventure "Doctor Occult".
-                </p>
-                <h3>Golden Age</h3>
-                <p>
-                    Wheeler-Nicholson's company pioneered the American comic book, publishing the first such periodical consisting solely of original material rather than reprints of newspaper comic strips, starting with Fun: The Big Comic Magazine #1 (Feb. 1935), called New Fun after the first issue. The evolving company was also the first to feature superheroes, beginning with Action Comics #1 in 1938. When the sales of the title proved unexpectedly strong and market research confirmed that the character, Superman, was the major reason, a period called the Golden Age of comic books began. In reaction, the company introduced such other popular characters as Batman, and Wonder Woman, and the first superhero team, the Justice Society of America.
-                </p>
-                <h3>Silver Age</h3>
-                <p>
-                    In the mid-1950s, editorial director Irwin Donenfeld and publisher Liebowitz decided that, even though they weren't publishing superheroes much anymore, the trademarks needed to be maintained.[citation needed] They directed editor Julius Schwartz to come up with a new Flash story to be printed as a one-shot in issue #4 (Oct. 1956) of the experimental title Showcase. Instead of reviving the old character, Schwartz had writers Gardner Fox and Robert Kanigher, penciler Carmine Infantino and inker Joe Kubert update and modernize the concept. The Flash's civilian identity, costume, and origin were all changed for a modern audience. Much to the publishers' surprise the issue sold, and more stories were scheduled. The new treatment proved popular enough that it soon led to similar revamping of Green Lantern, and the introduction of an updating of the Justice Society of America superhero team as the modern all-star team Justice League of America. Showcase #4 heralded what is commonly referred to as the Silver Age of comic books.
-                </p>
-
-            </article>
-        </section>
-
-        <section class="cent-col">
-            <header>
-                <h2>Updates</h2>
-            </header>
-            <article>
-                <!-- imports twitter timeline -->
-                <a class="twitter-timeline" href="https://twitter.com/DCComics?ref_src=twsrc%5Etfw">Tweets by DCComics</a>
-            </article>
-        </section>
-
-        <section class="right-col">
-            <header>
-                <h2>Shop</h2>
-            </header>
-            <article>
-                <section class = "shopitem">
-                    <h3>DC Comics Harley Quinn and Joker T Shirt (Black) </h3>
-
-
-                    <div class="slider">
-                        <input type="radio" name="slide_switch" id="id1" checked="checked"/>
-                        <label for="id1">
-                        <img src="images/shop/item1.jpg" width="100" />
-                    </label>
-                        <img class="mainimgshop" src="images/shop/item1.jpg" width="20" />
-
-                        <!--Lets show the second image by default on page load-->
-                        <input type="radio" name="slide_switch" id="id2"/>
-                        <label for="id2">
-                        <img class="mainimgshop" src="images/shop/item1.2.jpg" width="100" />
-                    </label>
-                        <img src="images/shop/item1.2.jpg" />
-
-                    </div>
-
-
-
-                    <p class="shopiteminfo">This officially licensed superhero t shirt features both Harley Quinn and the Joker, the two most famous villains in the Batman universe. With artwork from the DC Comics graphic novel, Batman: Harley Quinn, this is one tee for the hardcore fans
-                    </p>
-
-                    <a href='https://www.bluebanana.com/en/product/1021554/53/dc-comics-harley-quinn-and-joker-black-t-shirt?jssCart=8349cd3dd8fff0afc6599eb5ff81c785' id="buy">Purchase</a>
-
-                </section>
-                
-                <section class = "shopitem">
-                    <h3>DC Comics Harley Quinn and Joker T Shirt (Black) </h3>
-
-
-                    <div class="slider">
-                        <input type="radio" name="slide_switch" id="id3" checked="checked"/>
-                        <label for="id3">
-                        <img src="images/homebanner/bannerhome.jpg" width="100" />
-                    </label>
-                        <img class="mainimgshop" src="images/homebanner/bannerhome.jpg" width="20" />
-
-                        <!--Lets show the second image by default on page load-->
-                        <input type="radio" name="slide_switch" id="id4"/>
-                        <label for="id4">
-                        <img class="mainimgshop" src="images/dclogo.png" width="100" />
-                    </label>
-                        <img src="images/dclogo.png" />
-
-                    </div>
-
-
-
-                    <p class="shopiteminfo">This officially licensed superhero t shirt features both Harley Quinn and the Joker, the two most famous villains in the Batman universe. With artwork from the DC Comics graphic novel, Batman: Harley Quinn, this is one tee for the hardcore fans
-                    </p>
-
-                    <a href='https://www.bluebanana.com/en/product/1021554/53/dc-comics-harley-quinn-and-joker-black-t-shirt?jssCart=8349cd3dd8fff0afc6599eb5ff81c785' id="buy">Purchase</a>
-
-                </section>
-
-
-            </article>
-        </section>
-
-    </main>
-
-    <!-- button that -->
-    <section class="backtotop">
-        <button onclick="topFunction()" href="#" id="backtotopbtn" title="Go to top">&#8679 </button>
-
-    </section>
+    </aside>
 
     <footer id="footer">
         <p>Nahidul Islam DC Comics ®</p>
@@ -187,4 +54,4 @@
 
 </body>
 
-</html>
+</html
