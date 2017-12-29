@@ -89,6 +89,10 @@
 
 @media screen and (min-width: 651px) {
 
+    h3 {
+        font-size: 25px;
+    }
+
     .comicintro {
         display: flex;
         flex-direction: row;
@@ -173,6 +177,7 @@
 }
 
 /*--------------------------------------------------------------------------*/
+
 .comiclist {
     margin: 0 auto;
     display: block;
@@ -209,10 +214,14 @@ div[data-filter="blue"] {
 
 
 
+
 section a:focus[data-filter] {
     opacity: .8;
     outline: none;
 }
+
+/*swithcing between tabs*/
+
 
 section a[data-filter="red"]:focus ~ article div:not([data-filter="red"]) {
     height: 0px;

@@ -27,6 +27,11 @@ aside ul {
 /*breakpoint for larger devices using flex to display elements*/
 
 @media screen and (min-width: 651px) {
+
+    h3 {
+        font-size: 25px;
+    }
+    
     main {
         display: flex;
         flex-direction: row;
