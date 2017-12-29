@@ -1,73 +1,240 @@
-.comiclist{
-  display:block;
-  border:2px solid black;
-  min-height:300px;
-  border-radius:4px;
+/*--------------------------------------------------------------------------*/
+
+/*for small screen sizes*/
+
+@media screen and (max-width: 650px) {
+
+    .comicintro {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .comicintro h1 {
+        font-size: 2em;
+        margin: auto;
+        margin-right: 20px;
+    }
+    .comicintro form {
+        margin: auto;
+
+    }
+
+    .comicintro input {
+        width: 50%;
+    }
+
+    
+    .comiclist a {
+        margin: 0 auto;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-left: 5%;
+        line-height: 40px;
+
+    }
+    
+    .comics {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .comics img {
+        clear: both;
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        margin-bottom: 50px;
+    
+        
+
+    }
+    
+    .comics {
+        margin: auto;
+        flex-direction: row;
+        padding: 10px;
+        
+
+
+        
+    }
+    
+    .comiclist h3 {
+        clear: both;
+        position: relative;
+        
+    }
+
+    
+
+
 }
 
-.comiclist a{
-  display:block;
-  float:left;
-  width:25%;
-  text-decoration:none;
-  text-align:center;
-  padding:5px 0;
-  color:white;
-  background:#1271C7;
+
+
+/*--------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------*/
+
+/*breakpoint for larger screen size devices*/
+
+@media screen and (min-width: 651px) {
+
+    .comicintro {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .comicintro h1 {
+        margin: auto;
+        margin-right: 20px;
+    }
+    .comicintro form {
+        margin: auto;
+        width: 30%;
+
+    }
+
+    .comicintro input {
+        width: 60%;
+        height: 30px;
+    }
+
+    .comicintro button {
+        width: 30%;
+        float: right;
+        position: relative;
+        height: 34px;
+
+
+    }
+    
+      .comiclist a {
+        margin: 0 auto;
+          width: 50%;
+          float: left;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-left: 2%;
+        line-height: 40px;
+
+    }
+    
+    .comics {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .comics img {
+        clear: both;
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        margin-bottom: 50px;
+    
+        
+
+    }
+    
+    .comics {
+        margin: auto;
+        flex-direction: row;
+        padding: 10px;
+        
+
+
+        
+    }
+    
+    .comiclist h3 {
+        clear: both;
+        position: relative;
+        
+    }
+
+
+
 }
 
-div{
- display:block;
- float:left;
- height:40px;
- width:40px;
- border:1px solid black;
- margin:10px;
- -webkit-transition:all .8s linear;
- -moz-transition:all .8s linear;
- -o-transition:all .8s linear;
- -ms-transition:all .8s linear;
- transition:all .8s linear;
- margin-top:20px;
-}
+/*--------------------------------------------------------------------------*/
 
-div[data-filter="red"]{
-  background:red;
+.comiclist {
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px;
+    margin-bottom: 300px;
 
 }
 
-div[data-filter="green"]{
-  background:green;
-}
-
-div[data-filter="blue"]{
-  background:blue;
+.comiclist a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background: #1a405e;
+    font-family: 'Jura', sans-serif;
 }
 
 
 
-section a:focus[data-filter]{
-    opacity:.8;
-     outline:none;
+
+
+div[data-filter="red"] {
+    margin: 0 auto;
+    width: 30%;
 }
 
-section a[data-filter="red"]:focus ~ div:not([data-filter="red"]){
-  height:0px;
-  width:0px;
-  border:none;
-  margin:0;
+div[data-filter="green"] {
+    margin: 0 auto;
+    width:30%;
 }
 
-section a[data-filter="green"]:focus ~ div:not([data-filter="green"]){
-  height:0px;
-  width:0px;
-  border:none;
-  margin:0;
+div[data-filter="blue"] {
+    margin: 0 auto;
+    width: 50%;;
 }
 
-a[data-filter="blue"]:focus ~ div:not([data-filter="blue"]){
-  height:0px;
-  width:0px;
-  border:none;
-  margin:0;
+
+
+section a:focus[data-filter] {
+    opacity: .8;
+    outline: none;
+}
+
+section a[data-filter="red"]:focus ~ article div:not([data-filter="red"]) {
+    height: 0px;
+    width: 0px;
+    border: none;
+    margin: 0;
+    display: none;
+}
+
+section a[data-filter="green"]:focus ~ article div:not([data-filter="green"]) {
+    height: 0px;
+    width: 0px;
+    border: none;
+    margin: 0;
+    display: none;
+}
+
+a[data-filter="blue"]:focus ~ article div:not([data-filter="blue"]) {
+    height: 0px;
+    width: 0px;
+    border: none;
+    margin: 0;
+    display: none;
 }

@@ -37,7 +37,7 @@
 
     </nav>
 
-    <header>
+    <header class="comicintro">
         <h1> COMICS</h1>
         <form>
             <input type="text" id="searchcomic" placeholder="Search a comic..">
@@ -48,28 +48,52 @@
     </header>
 
     <section class="comiclist">
+        
+        <h2> Search for a comic</h2>
 
         <a href="#" data-filter="all" tabindex="-1">ALL</a>
         <a href="#" data-filter="red" tabindex="-1">FLASH</a>
         <a href="#" data-filter="green" tabindex="-1">BATMAN</a>
-        <a href="#" data-filter="blue" tabindex="-1">ARROW</a>
+        <a href="#" data-filter="blue" tabindex="-1">WONDER WOMAN</a>
 
+        <article class="comics">
 
-        <div data-filter="red"><h3> flash </h3><img src="images/apple-touch-icon.png"></div>
-        <div data-filter="blue"></div>
-        <div data-filter="red"></div>
-        <div data-filter="blue"></div>
-        <div data-filter="green"></div>
-        <div data-filter="red"></div>
-        <div data-filter="red"></div>
-        <div data-filter="red"></div>
-        <div data-filter="blue"></div>
-        <div data-filter="green"></div>
-        <div data-filter="blue"></div>
-        <div data-filter="green"></div>
-        <div data-filter="green"></div>
+            <div data-filter="red">
+                <h3> Flash </h3><img src="images/Comics/Flash/flash1.jpg" alt="flash1">
+                <h3> Flash </h3><img src="images/Comics/Flash/flash2.jpeg" alt="flash2">
+                <h3> Flash </h3><img src="images/Comics/Flash/flash3.jpeg" alt="flash3">
+
+            </div>
+
+            <div data-filter="green">
+                <h3> Batman </h3><img src="images/Comics/Batman/batman1.jpeg" alt="batman1">
+                <h3> Batman </h3><img src="images/Comics/Batman/batman2.jpeg" alt="batman2">
+                <h3> Batman </h3><img src="images/Comics/Batman/batman3.jpg" alt="batman3">
+
+            </div>
+
+            <div data-filter="blue">
+                <h3> Wonder Woman </h3><img src="images/Comics/WonderWoman/wonder1.jpg" alt="wonderwoman1">
+                <h3> Wonder Woman </h3><img src="images/Comics/WonderWoman/wonder2.jpg" alt="wonderwoman2">
+                <h3> Wonder Woman </h3><img src="images/Comics/WonderWoman/wonder3.jpg" alt="wonderwoman3">
+
+            </div>
+            
+            <div data-filter="blue">
+                <h3> Wonder Woman </h3><img src="images/Comics/WonderWoman/wonder1.jpg" alt="wonderwoman1">
+                <h3> Wonder Woman </h3><img src="images/Comics/WonderWoman/wonder2.jpg" alt="wonderwoman2">
+                <h3> Wonder Woman </h3><img src="images/Comics/WonderWoman/wonder3.jpg" alt="wonderwoman3">
+
+            </div>
+            
+            
+        </article>
+
 
     </section>
+
+
+
 
 
     <!-- button that takes user to top of the page when clicked -->
@@ -85,4 +109,4 @@
 
 </body>
 
-</html
+</html>

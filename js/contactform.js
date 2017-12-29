@@ -38,28 +38,30 @@ function ratingcheck() {
 
 function initMap() {
     "use strict";
-    let leicester = {
+    //setting latitude and longitude 
+    
+    let burbank = {
         lat: 34.180839,
         lng: -118.308966
     };
-    let dmu = {
+    let hq = {
         lat: 34.148655,
         lng: -118.338719
     };
 
     let mapDemo = document.getElementById("map");
 
-    // this sets th default location for when the map is first loaded
+    // location when window is loaded 
     let map = new google.maps.Map(mapDemo, {
         zoom: 10,
-        center: leicester
+        center: burbank
     });
 
-    // these set different markers you want to show on your map
+    // markers pin pointing location
     let markerDMU = new google.maps.Marker({
-        position: dmu,
+        position: hq,
         map: map,
-        title: 'The Good Guys'
+        title: 'Headquarters DC Comics'
     });
 
 }

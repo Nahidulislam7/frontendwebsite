@@ -1,0 +1,80 @@
+/*--------------------------------------------------------------------------*/
+
+/*for small screen sizes*/
+
+@media screen and (max-width: 650px) {
+
+    .tvshowintro {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+    .tvshowintro h1 {
+        font-size: 2em;
+        margin: auto;
+        margin-right: 20px;
+    }
+    .tvshowintro form {
+        margin: auto;
+
+    }
+
+    .tvshowintro input {
+        width: 60%;
+        height: 20px;
+    }
+
+     .tvshowintro button {
+        height: 24px;
+    }
+    
+
+
+
+
+}
+
+
+
+/*--------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------*/
+
+/*breakpoint for larger screen size devices*/
+
+@media screen and (min-width: 651px) {
+
+    .tvshowintro {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+    .tvshowintro h1 {
+        margin: auto;
+        margin-right: 20px;
+    }
+    .tvshowintro form {
+        margin: auto;
+        width: 30%;
+
+    }
+
+    .tvshowintro input {
+        width: 60%;
+        height: 30px;
+    }
+
+    .tvshowintro button {
+        width: 30%;
+        float: right;
+        position: relative;
+        height: 34px;
+
+    }
+
+
+}
+
+/*--------------------------------------------------------------------------*/
