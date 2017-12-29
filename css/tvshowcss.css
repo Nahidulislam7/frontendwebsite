@@ -25,13 +25,24 @@
         height: 20px;
     }
 
-     .tvshowintro button {
+    .tvshowintro button {
         height: 24px;
     }
-    
 
+    section iframe {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+        height: 300px;
+        margin-top: 20px;
 
+    }
 
+    article {
+        margin: 0 auto;
+        display: block;
+        width: 90%;
+    }
 
 }
 
@@ -72,6 +83,22 @@
         position: relative;
         height: 34px;
 
+    }
+
+    article {
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+
+
+    section iframe {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        height: 500px;
+        margin-top: 20px;
     }
 
 

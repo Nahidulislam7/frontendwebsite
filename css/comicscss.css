@@ -1,70 +1,5 @@
 @charset "UTF-8";
 
-.comiclist {
-    margin: 0 auto;
-    display: block;
-    border-radius: 4px;
-    margin-bottom: 300px;
-
-}
-
-.comiclist a {
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    background: #1a405e;
-    font-family: 'Jura', sans-serif;
-}
-
-
-div[data-filter="red"] {
-    margin: 0 auto;
-    width: 30%;
-}
-
-div[data-filter="green"] {
-    margin: 0 auto;
-    width: 30%;
-}
-
-div[data-filter="blue"] {
-    margin: 0 auto;
-    width: 50%;
-    ;
-}
-
-
-
-section a:focus[data-filter] {
-    opacity: .8;
-    outline: none;
-}
-
-section a[data-filter="red"]:focus ~ article div:not([data-filter="red"]) {
-    height: 0px;
-    width: 0px;
-    border: none;
-    margin: 0;
-    display: none;
-}
-
-section a[data-filter="green"]:focus ~ article div:not([data-filter="green"]) {
-    height: 0px;
-    width: 0px;
-    border: none;
-    margin: 0;
-    display: none;
-}
-
-a[data-filter="blue"]:focus ~ article div:not([data-filter="blue"]) {
-    height: 0px;
-    width: 0px;
-    border: none;
-    margin: 0;
-    display: none;
-}
-
 /*--------------------------------------------------------------------------*/
 
 /*for small screen sizes*/
@@ -238,3 +173,67 @@ a[data-filter="blue"]:focus ~ article div:not([data-filter="blue"]) {
 }
 
 /*--------------------------------------------------------------------------*/
+.comiclist {
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px;
+    margin-bottom: 300px;
+
+}
+
+.comiclist a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background: #1a405e;
+    font-family: 'Jura', sans-serif;
+}
+
+
+div[data-filter="red"] {
+    margin: 0 auto;
+    width: 30%;
+}
+
+div[data-filter="green"] {
+    margin: 0 auto;
+    width: 30%;
+}
+
+div[data-filter="blue"] {
+    margin: 0 auto;
+    width: 50%;
+    ;
+}
+
+
+
+section a:focus[data-filter] {
+    opacity: .8;
+    outline: none;
+}
+
+section a[data-filter="red"]:focus ~ article div:not([data-filter="red"]) {
+    height: 0px;
+    width: 0px;
+    border: none;
+    margin: 0;
+    display: none;
+}
+
+section a[data-filter="green"]:focus ~ article div:not([data-filter="green"]) {
+    height: 0px;
+    width: 0px;
+    border: none;
+    margin: 0;
+    display: none;
+}
+
+a[data-filter="blue"]:focus ~ article div:not([data-filter="blue"]) {
+    height: 0px;
+    width: 0px;
+    border: none;
+    margin: 0;
+    display: none;
+}

@@ -13,7 +13,7 @@ function collapsenav() {
     let changenav = document.getElementById("mainnav");
 
     if (changenav.className === "mainnav") {
-        changenav.className += " responsivenav";
+        changenav.className += " responsivenav"; //nav is collapsed by changing the class in the css
     } else {
         changenav.className = "mainnav";
     }
@@ -38,7 +38,8 @@ function stickyscroll() {
 
 
 function scrollFunction() {
-    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) { 
+        //if the window is scrolled over 700 px the btn is displayed
         document.getElementById("backtotopbtn").style.display = "block";
 
     } else {
