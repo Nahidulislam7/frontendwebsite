@@ -1,5 +1,69 @@
-
 @charset "UTF-8";
+
+.comiclist {
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px;
+    margin-bottom: 300px;
+
+}
+
+.comiclist a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background: #1a405e;
+    font-family: 'Jura', sans-serif;
+}
+
+
+div[data-filter="red"] {
+    margin: 0 auto;
+    width: 30%;
+}
+
+div[data-filter="green"] {
+    margin: 0 auto;
+    width: 30%;
+}
+
+div[data-filter="blue"] {
+    margin: 0 auto;
+    width: 50%;
+    ;
+}
+
+
+
+section a:focus[data-filter] {
+    opacity: .8;
+    outline: none;
+}
+
+section a[data-filter="red"]:focus ~ article div:not([data-filter="red"]) {
+    height: 0px;
+    width: 0px;
+    border: none;
+    margin: 0;
+    display: none;
+}
+
+section a[data-filter="green"]:focus ~ article div:not([data-filter="green"]) {
+    height: 0px;
+    width: 0px;
+    border: none;
+    margin: 0;
+    display: none;
+}
+
+a[data-filter="blue"]:focus ~ article div:not([data-filter="blue"]) {
+    height: 0px;
+    width: 0px;
+    border: none;
+    margin: 0;
+    display: none;
+}
 
 /*--------------------------------------------------------------------------*/
 
@@ -28,7 +92,7 @@
         width: 50%;
     }
 
-    
+
     .comiclist a {
         margin: 0 auto;
         padding-bottom: 20px;
@@ -38,11 +102,11 @@
         line-height: 40px;
 
     }
-    
+
     .comics {
         display: flex;
         flex-direction: row;
-        justify-content:space-between;
+        justify-content: space-between;
         flex-wrap: wrap;
         margin: 0 auto;
         overflow: hidden;
@@ -54,28 +118,28 @@
         display: block;
         width: 100%;
         margin-bottom: 50px;
-    
-        
+
+
 
     }
-    
+
     .comics {
         margin: auto;
         flex-direction: row;
         padding: 10px;
-        
 
 
-        
+
+
     }
-    
+
     .comiclist h3 {
         clear: both;
         position: relative;
-        
+
     }
 
-    
+
 
 
 }
@@ -120,11 +184,11 @@
 
 
     }
-    
-      .comiclist a {
+
+    .comiclist a {
         margin: 0 auto;
-          width: 50%;
-          float: left;
+        width: 50%;
+        float: left;
         padding-bottom: 20px;
         margin-bottom: 20px;
         margin-right: 20px;
@@ -132,11 +196,11 @@
         line-height: 40px;
 
     }
-    
+
     .comics {
         display: flex;
         flex-direction: row;
-        justify-content:space-between;
+        justify-content: space-between;
         flex-wrap: wrap;
         margin: 0 auto;
         overflow: hidden;
@@ -148,25 +212,25 @@
         display: block;
         width: 100%;
         margin-bottom: 50px;
-    
-        
+
+
 
     }
-    
+
     .comics {
         margin: auto;
         flex-direction: row;
         padding: 10px;
-        
 
 
-        
+
+
     }
-    
+
     .comiclist h3 {
         clear: both;
         position: relative;
-        
+
     }
 
 
@@ -174,70 +238,3 @@
 }
 
 /*--------------------------------------------------------------------------*/
-
-.comiclist {
-    margin: 0 auto;
-    display: block;
-    border-radius: 4px;
-    margin-bottom: 300px;
-
-}
-
-.comiclist a {
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    background: #1a405e;
-    font-family: 'Jura', sans-serif;
-}
-
-
-
-
-
-div[data-filter="red"] {
-    margin: 0 auto;
-    width: 30%;
-}
-
-div[data-filter="green"] {
-    margin: 0 auto;
-    width:30%;
-}
-
-div[data-filter="blue"] {
-    margin: 0 auto;
-    width: 50%;;
-}
-
-
-
-section a:focus[data-filter] {
-    opacity: .8;
-    outline: none;
-}
-
-section a[data-filter="red"]:focus ~ article div:not([data-filter="red"]) {
-    height: 0px;
-    width: 0px;
-    border: none;
-    margin: 0;
-    display: none;
-}
-
-section a[data-filter="green"]:focus ~ article div:not([data-filter="green"]) {
-    height: 0px;
-    width: 0px;
-    border: none;
-    margin: 0;
-    display: none;
-}
-
-a[data-filter="blue"]:focus ~ article div:not([data-filter="blue"]) {
-    height: 0px;
-    width: 0px;
-    border: none;
-    margin: 0;
-    display: none;
-}
